@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from problimite import solve_boundary_problem
+from problimite import solve_problimite
 
 
 def exact(x):
@@ -16,7 +16,7 @@ def simulation(h):
     P = -1.0 / x
     Q = np.zeros_like(x)
     R = -1.6 / x**4
-    y = solve_boundary_problem((b - a) / N, P, Q, R, a, b, alpha=0.0, beta=0.0)
+    y = solve_problimite((b - a) / N, P, Q, R, a, b, alpha=0.0, beta=0.0)
     return x, y
 
 

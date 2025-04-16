@@ -1,7 +1,7 @@
 import numpy as np
 from tridiagonal import tridiagonal
 
-def solve_boundary_problem(h, P, Q, R, a, b, alpha, beta):
+def solve_problimite(h, P, Q, R, a, b, alpha, beta):
     N = len(P) - 2
     D = np.zeros(N)
     I = np.zeros(N-1)
