@@ -65,8 +65,8 @@ if __name__ == '__main__':
     plt.title('Figure 2 - Erreur en fonction de h', fontsize=14, fontweight='bold')
     plt.xlabel('h')
     plt.ylabel('E(h)')
-    plt.xlim(1e-5, 1e-2)
-    plt.ylim(1e-13, 1e-5)
+    plt.xlim(1e-5, 1.2e-2)  # élargir la plage X pour voir le point h=10⁻²
+    plt.ylim(1e-13, 1e-5)  # élargir verticalement pour voir le point h=10⁻²  # étendre vers le bas pour voir le point h=1e-5
     plt.xticks([1e-5, 1e-4, 1e-3, 1e-2],
                ['10$^{-5}$', '10$^{-4}$', '10$^{-3}$', '10$^{-2}$'])
     plt.yticks([1e-12, 1e-11, 1e-10, 1e-9, 1e-8, 1e-7],
