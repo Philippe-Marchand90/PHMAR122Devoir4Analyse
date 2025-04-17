@@ -19,6 +19,7 @@ def dense_tridiagonal(D, I, S, b):
             A[i, i+1] = S[i]
     return np.linalg.solve(A, b)
 
+#test
 if __name__ == '__main__':
 
     N = 15000
