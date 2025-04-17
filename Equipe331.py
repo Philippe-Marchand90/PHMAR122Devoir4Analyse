@@ -19,4 +19,36 @@ def simulation(h):
     y = solve_problimite((b - a) / N, P, Q, R, a, b, alpha=0.0, beta=0.0)
     return x, y
 
+#  --- Figure 1
+if __name__ == '__main__':
+
+    h1, h2 = 1/30, 1/100
+
+    x1, y1 = simulation(h1)
+
+    x2, y2 = simulation(h2)
+
+    hd = np.linspace(0.9, 1.0, 500)
+    yd = exact(hd)
+
+    plt.figure(figsize=(8, 6))
+    plt.plot(hd, yd, color='gray', linewidth=2, label='y exact')
+  
+    plt.plot(x1, y1, color='tab:blue', marker='o', markersize=6,
+             linewidth=2, label='approximation avec h/30')
+ 
+    plt.plot(x2, y2, color='tab:red', marker='o', linestyle='--',
+             markersize=6, linewidth=2, label='approximation avec h/100')
+    plt.title('Figure 1 - y en fonction de h', fontsize=14, fontweight='bold')
+    plt.xlabel('h')
+    plt.ylabel('y')
+    plt.xlim(0.9, 1.0)
+    plt.ylim(0, 0.0025)
+    plt.xticks(np.linspace(0.9, 1.0, 6))
+    plt.yticks(np.linspace(0, 0.0025, 6))
+    plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+    plt.legend(loc='lower center', fontsize=10)
+    plt.tight_layout()
+    plt.show()
+
 
